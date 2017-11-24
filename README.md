@@ -51,11 +51,11 @@ If you want to use your step in your project's `bitrise.yml`:
 2. reference it in your `bitrise.yml` with the `git::PUBLIC-GIT-CLONE-URL@BRANCH` step reference style:
 
 ```
-- git::https://github.com/user/my-step.git@branch:
-   title: My step
+- git::https://github.com/quamotion/bitrise-step-publish-test-package-to-quamotion-cloud@master:
+   title: Upload Test Package
    inputs:
-   - my_input_1: "my value 1"
-   - my_input_2: "my value 2"
+   - test_package_path: "your-test-package.zip"
+   - quamotion_api_key: "YOUR-API-KEY"
 ```
 
 You can find more examples of step reference styles
