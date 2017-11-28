@@ -9,8 +9,8 @@ echo "Connected to the Quamotion project at https://quamotion.mobi/$QUAMOTION_RE
 echo "Uploading $test_package_path"
 QUAMOTION_PACKAGE=`curl -s -H "Authorization: Bearer $QUAMOTION_ACCESS_TOKEN" -F files=@$test_package_path https://cloud.quamotion.mobi${QUAMOTION_RELATIVE_URL}api/testPackage`
 
-TEST_PACKAGE_NAME=`echo $QUAMOTION_PACKAGE | jq -r . '.name'`
-TEST_PACKAGE_VERSION=`echo $QUAMOTION_PACKAGE | jq -r . '.version'`
+TEST_PACKAGE_NAME=`echo $QUAMOTION_PACKAGE | jq -r '.[0].name'`
+TEST_PACKAGE_VERSION=`echo $QUAMOTION_PACKAGE | jq -r '.[0].version'`
 echo "Successfully uploaded $TEST_PACKAGE_NAME $TEST_PACKAGE_VERSION based on $test_package_path"
 
 #
