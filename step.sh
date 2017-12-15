@@ -4,7 +4,7 @@ set -ex
 echo "Logging in to Quamotion Cloud"
 QUAMOTION_ACCESS_TOKEN=`curl -s -d "apiKey=$quamotion_api_key" https://cloud.quamotion.mobi/api/login | jq -r '.access_token'`
 QUAMOTION_RELATIVE_URL=`curl -s -H "Authorization: Bearer $QUAMOTION_ACCESS_TOKEN" https://cloud.quamotion.mobi/api/project | jq -r '.[0].relativeUrl'`
-echo "Connected to the Quamotion project at https://quamotion.mobi/$QUAMOTION_RELATIVE_URL"
+echo "Connected to the Quamotion project at https://quamotion.mobi$QUAMOTION_RELATIVE_URL"
 
 echo "Uploading $test_package_path"
 QUAMOTION_PACKAGE=`curl -s -H "Authorization: Bearer $QUAMOTION_ACCESS_TOKEN" -F files=@$test_package_path https://cloud.quamotion.mobi${QUAMOTION_RELATIVE_URL}api/testPackage`
