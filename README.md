@@ -35,7 +35,7 @@ To use this step, follow these steps:
 
 ```
 - git::https://github.com/quamotion/bitrise-step-publish-test-package-to-quamotion-cloud@master:
-    title: Publish APK to Quamotion
+    title: Publish test package to Quamotion
     inputs:
     - quamotion_api_key: _YOUR_API_KEY_
     - test_package_path: _YOUR_TEST_PACKAGE_
