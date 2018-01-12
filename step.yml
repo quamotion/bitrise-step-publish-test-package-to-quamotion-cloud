@@ -72,7 +72,6 @@ inputs:
         Provide the path to the test pacakge you want to publish.
       is_expand: true
       is_required: true
-      value_options: []
   - quamotion_api_key: Your Quamotion API Key
     opts:
       title: "Quamotion API Key"
@@ -81,7 +80,6 @@ inputs:
         See your Quamotion Cloud project for more information on how to create API keys.
       is_expand: true
       is_required: true
-      value_options: []
 
 outputs:
   - TEST_PACKAGE_NAME:
