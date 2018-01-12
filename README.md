@@ -11,6 +11,8 @@ This step publishes your Android or iOS tests to Quamotion Cloud.
 
 Once you've published your app to Quamotion Cloud, you can test your app on various Android and iOS devices hosted by Quamotion.
 
+![Publish test package to Quamotion Cloud](bitrise_publish_test_package_to_quamotion.png)
+
 This step takes two parameters:
 - Your Quamotion API key
 - The path to test package you want to publish
